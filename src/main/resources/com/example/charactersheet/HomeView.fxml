@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.charactersheet.CSheetView">
+   <content>
+      <TabPane fx:id="Root">
+         <tabs>
+            <Tab text="Home">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="988.0" prefWidth="875.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="208.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="2.0" layoutY="2.0" prefHeight="27.0" prefWidth="61.0" text="STR" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="StrMod" alignment="CENTER" editable="false" layoutX="5.0" layoutY="30.0" prefHeight="40.0" prefWidth="55.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="29.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="281.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="StrScore" alignment="CENTER" layoutX="-51.0" layoutY="-12.0" onAction="#StrModUpdate" prefHeight="19.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="331.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="3.0" layoutY="3.0" prefHeight="27.0" prefWidth="59.0" text="DEX" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="DexMod" alignment="CENTER" editable="false" layoutX="4.0" layoutY="28.0" prefHeight="38.0" prefWidth="57.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="27.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="399.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="DexScore" alignment="CENTER" layoutX="-51.0" layoutY="-3.0" onAction="#DexModUpdate" prefHeight="24.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="457.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="2.0" layoutY="2.0" prefHeight="32.0" prefWidth="61.0" text="CON" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="ConMod" alignment="CENTER" editable="false" layoutX="3.0" layoutY="30.0" prefHeight="38.0" prefWidth="59.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="29.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="525.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="ConScore" alignment="CENTER" layoutX="-58.0" layoutY="-3.0" onAction="#ConModUpdate" prefHeight="24.0" prefWidth="93.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="581.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="2.0" layoutY="2.0" prefHeight="32.0" prefWidth="61.0" text="INT" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="IntMod" alignment="CENTER" editable="false" layoutX="2.0" layoutY="32.0" prefHeight="36.0" prefWidth="61.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="31.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="649.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="IntScore" alignment="CENTER" layoutX="-51.0" layoutY="-3.0" onAction="#IntModUpdate" prefHeight="24.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="708.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="2.0" layoutY="2.0" prefHeight="29.0" prefWidth="61.0" text="WIS" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="WisMod" alignment="CENTER" editable="false" layoutX="2.0" layoutY="32.0" prefHeight="36.0" prefWidth="61.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="31.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="776.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="WisScore" alignment="CENTER" layoutX="-59.0" layoutY="-3.0" onAction="#WisModUpdate" prefHeight="24.0" prefWidth="92.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="835.0" prefHeight="68.0" prefWidth="63.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField alignment="CENTER" editable="false" layoutX="2.0" layoutY="2.0" prefHeight="27.0" prefWidth="61.0" text="CHA" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0" />
+                              <TextField fx:id="ChaMod" alignment="CENTER" editable="false" layoutX="3.0" layoutY="30.0" prefHeight="38.0" prefWidth="59.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="29.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="22.0" layoutY="903.0" prefHeight="19.0" prefWidth="47.0" style="-fx-border-color: black;">
+                           <children>
+                              <TextField fx:id="ChaScore" alignment="CENTER" layoutX="-51.0" layoutY="-3.0" onAction="#ChaModUpdate" prefHeight="24.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="108.0" layoutY="207.0" prefHeight="173.0" prefWidth="201.0">
+                           <children>
+                              <GridPane layoutX="1.0" layoutY="32.0" prefHeight="141.0" prefWidth="200.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.0" minWidth="10.0" prefWidth="30.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="92.0" minWidth="10.0" prefWidth="60.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="111.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <CheckBox fx:id="StrSTProf" mnemonicParsing="false" onAction="#StrModUpdate" />
+                                    <CheckBox fx:id="DexSTProf" mnemonicParsing="false" onAction="#DexModUpdate" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="ConSTProf" mnemonicParsing="false" onAction="#ConModUpdate" GridPane.rowIndex="2" />
+                                    <CheckBox fx:id="IntSTProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="3" />
+                                    <CheckBox fx:id="WisSTProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="4" />
+                                    <TextField editable="false" text="Strenght" GridPane.columnIndex="2" />
+                                    <TextField editable="false" text="Dexterity" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField editable="false" text="Constitution" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField editable="false" text="Intelligence" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <TextField editable="false" text="Wisdom" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField fx:id="StrST" alignment="CENTER" editable="false" GridPane.columnIndex="1" />
+                                    <TextField fx:id="DexST" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="ConST" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="IntST" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="WisST" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField editable="false" text="Charisma" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField fx:id="ChaST" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <CheckBox fx:id="ChaSTProf" mnemonicParsing="false" onAction="#ChaModUpdate" GridPane.rowIndex="5" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="1.0" layoutY="-31.0" prefHeight="31.0" prefWidth="201.0" AnchorPane.bottomAnchor="142.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="62.0" minWidth="10.0" prefWidth="33.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="62.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="109.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="30.0" text="Proficiency" />
+                                    <TextField editable="false" text="Modifier" GridPane.columnIndex="1" />
+                                    <TextField editable="false" text="Ability Score" GridPane.columnIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="108.0" layoutY="391.0" prefHeight="583.0" prefWidth="220.0">
+                           <children>
+                              <GridPane layoutY="38.0" minWidth="0.0" prefHeight="545.0" prefWidth="239.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.0" minWidth="10.0" prefWidth="30.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="65.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="139.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <CheckBox fx:id="AcrProf" mnemonicParsing="false" onAction="#DexModUpdate" />
+                                    <CheckBox fx:id="ArcProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="2" />
+                                    <CheckBox fx:id="AthProf" mnemonicParsing="false" onAction="#StrModUpdate" GridPane.rowIndex="3" />
+                                    <CheckBox fx:id="DecProf" mnemonicParsing="false" onAction="#ChaModUpdate" GridPane.rowIndex="4" />
+                                    <CheckBox fx:id="HisProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="5" />
+                                    <CheckBox fx:id="InsProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="6" />
+                                    <CheckBox fx:id="IntimProf" mnemonicParsing="false" onAction="#ChaModUpdate" GridPane.rowIndex="7" />
+                                    <CheckBox fx:id="InvProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="8" />
+                                    <CheckBox fx:id="MedProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="9" />
+                                    <CheckBox fx:id="NatProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="10" />
+                                    <CheckBox fx:id="PercProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="11" />
+                                    <CheckBox fx:id="PerfProf" mnemonicParsing="false" onAction="#ChaModUpdate" GridPane.rowIndex="12" />
+                                    <CheckBox fx:id="PersProf" mnemonicParsing="false" onAction="#ChaModUpdate" GridPane.rowIndex="13" />
+                                    <CheckBox fx:id="RelProf" mnemonicParsing="false" onAction="#IntModUpdate" GridPane.rowIndex="14" />
+                                    <CheckBox fx:id="SoHProf" mnemonicParsing="false" onAction="#DexModUpdate" GridPane.rowIndex="15" />
+                                    <CheckBox fx:id="SteProf" mnemonicParsing="false" onAction="#DexModUpdate" GridPane.rowIndex="16" />
+                                    <CheckBox fx:id="SurProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="17" />
+                                    <CheckBox fx:id="AnHProf" mnemonicParsing="false" onAction="#WisModUpdate" GridPane.rowIndex="1" />
+                                    <TextField fx:id="AcrBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" />
+                                    <TextField editable="false" text="Acrobatics (DEX)" GridPane.columnIndex="2" />
+                                    <TextField fx:id="AnHBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="117.0" text="Animal Handling (WIS)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="ArcBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="AthBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="DecBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="HisBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="InsBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField fx:id="IntimBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="InvBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="MedBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField fx:id="NatBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="PercBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField fx:id="PerfBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <TextField fx:id="PersBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                    <TextField fx:id="RelBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <TextField fx:id="SoHBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                    <TextField fx:id="SteBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <TextField fx:id="SurBonus" alignment="CENTER" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                    <TextField editable="false" text="Arcana (INT)" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField editable="false" text="Deception (CHA)" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <TextField editable="false" text="History (INT)" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <TextField editable="false" text="Insight (WIS)" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <TextField editable="false" text="Intimidation (CHA)" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <TextField editable="false" text="Investigation (INT)" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <TextField editable="false" text="Medicine (WIS)" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <TextField editable="false" text="Nature (INT)" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <TextField editable="false" text="Perception (WIS)" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <TextField editable="false" text="Performance (CHA)" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <TextField editable="false" text="Persuasion (CHA)" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                    <TextField editable="false" text="Religion (INT)" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                    <TextField editable="false" text="Sleight of Hand (DEX)" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                    <TextField editable="false" text="Stealth (DEX)" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                    <TextField editable="false" text="Survival (WIS)" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                    <TextField editable="false" text="Athletics (STR)" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <GridPane alignment="CENTER" layoutX="-11.0" layoutY="8.0" prefHeight="17.0" prefWidth="220.0" AnchorPane.bottomAnchor="544.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="68.0" minWidth="10.0" prefWidth="35.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="64.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="139.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="28.0" text="Proficiency" GridPane.halignment="CENTER" />
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="55.0" text="Modifier" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                    <TextField editable="false" text="Skill" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.19473684210526315" layoutX="108.0" layoutY="157.0" prefHeight="27.0" prefWidth="192.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="41.0" prefWidth="44.0">
+                                 <children>
+                                    <TextField fx:id="ProfBonus" alignment="CENTER" layoutX="-51.0" layoutY="17.0" prefHeight="43.0" prefWidth="47.0" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField editable="false" layoutX="-18.0" layoutY="17.0" prefHeight="43.0" prefWidth="145.0" text="Proficiency bonus" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.18421052631578946" layoutX="108.0" layoutY="121.0" prefHeight="27.0" prefWidth="192.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="25.0" prefWidth="28.0">
+                                 <children>
+                                    <TextField layoutX="6.0" layoutY="17.0" prefHeight="25.0" prefWidth="24.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <CheckBox layoutX="10.0" layoutY="4.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField editable="false" layoutX="-18.0" layoutY="17.0" prefHeight="25.0" prefWidth="164.0" text="Inspiration" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <GridPane layoutX="364.0" layoutY="118.0" prefHeight="60.0" prefWidth="139.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="82.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="57.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField editable="false" text="Evasion class" />
+                              <TextField editable="false" text="Armor class" GridPane.rowIndex="1" />
+                              <TextField prefHeight="25.0" prefWidth="65.0" GridPane.columnIndex="1" />
+                              <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <SplitPane dividerPositions="0.6212" layoutX="519.0" layoutY="122.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="71.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField fx:id="Initiative" alignment="CENTER" layoutX="-16.0" prefHeight="37.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="-29.0" layoutY="-2.0" prefHeight="17.0" prefWidth="158.0" text="Initiative" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.6212" layoutX="610.0" layoutY="122.0" orientation="VERTICAL" prefHeight="60.0" prefWidth="71.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" layoutX="-16.0" prefHeight="37.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="25.0" prefWidth="69.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="-29.0" prefHeight="17.0" prefWidth="69.0" text="Speed" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.6881720430107527" layoutX="439.0" layoutY="195.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="192.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.4915254237288136" layoutX="14.0" layoutY="-52.0" orientation="VERTICAL" prefHeight="96.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                             <children>
+                                                <SplitPane dividerPositions="0.6526315789473685" layoutX="-22.0" layoutY="-62.0" prefHeight="32.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <TextField editable="false" layoutX="-44.0" layoutY="2.0" prefHeight="30.0" prefWidth="60.0" text="Hit Point Maximum" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="24.0" prefWidth="50.0">
+                                                         <children>
+                                                            <TextField layoutX="-56.0" layoutY="-12.0" prefHeight="24.0" prefWidth="63.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="57.0" prefWidth="156.0">
+                                             <children>
+                                                <SplitPane dividerPositions="0.6649" layoutX="-44.0" layoutY="-38.0" prefHeight="60.0" prefWidth="156.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <items>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <TextField editable="false" layoutX="-53.0" layoutY="2.0" prefHeight="54.0" prefWidth="43.0" text="Current Hit Point" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                                         <children>
+                                                            <TextField layoutX="-45.0" layoutY="-1.0" prefHeight="23.0" prefWidth="59.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </items>
+                                                </SplitPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <SplitPane dividerPositions="0.6649" prefHeight="114.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <items>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TextField editable="false" layoutX="-60.0" layoutY="22.0" prefHeight="94.0" prefWidth="43.0" text="Temporary Hit Point" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TextField layoutX="-51.0" prefHeight="24.0" prefWidth="60.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.25806451612903225" layoutX="323.0" layoutY="195.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="111.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="-19.0" layoutY="2.0" prefHeight="28.0" prefWidth="158.0" text="Hit Dice" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane layoutX="-32.0" layoutY="14.0" prefHeight="164.0" prefWidth="158.0" style="-fx-border-image-slice: 100px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="93.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" prefWidth="65.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TextField editable="false" text="Maximum" />
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="63.0" text="Current" GridPane.rowIndex="1" />
+                                          <TextField GridPane.columnIndex="1" />
+                                          <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.25806451612903225" layoutX="638.0" layoutY="195.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="111.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="-19.0" layoutY="2.0" prefHeight="28.0" prefWidth="158.0" text="Death Saves" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane layoutX="-32.0" layoutY="14.0" prefHeight="164.0" prefWidth="158.0" style="-fx-border-image-slice: 100px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="78.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="70.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="59.0" text="Success" />
+                                          <TextField editable="false" prefHeight="25.0" prefWidth="63.0" text="Failure" GridPane.rowIndex="1" />
+                                          <GridPane prefHeight="33.0" prefWidth="76.0" GridPane.columnIndex="1">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="38.0" minWidth="10.0" prefWidth="22.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="57.0" minWidth="10.0" prefWidth="22.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="19.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <CheckBox mnemonicParsing="false" />
+                                                <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
+                                                <CheckBox mnemonicParsing="false" GridPane.columnIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="39.0" minWidth="10.0" prefWidth="19.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="53.0" minWidth="9.0" prefWidth="19.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="32.0" minWidth="5.0" prefWidth="15.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <CheckBox mnemonicParsing="false" />
+                                                <CheckBox mnemonicParsing="false" GridPane.columnIndex="1" />
+                                                <CheckBox mnemonicParsing="false" GridPane.columnIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <AnchorPane layoutX="202.0" layoutY="14.0">
+                           <children>
+                              <SplitPane dividerPositions="0.48" layoutY="25.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="160.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TextField alignment="CENTER" editable="false" layoutX="35.0" layoutY="-12.0" prefHeight="21.0" prefWidth="158.0" text="Character name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TextField layoutX="-16.0" layoutY="-1.0" prefHeight="23.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <GridPane layoutX="161.0" prefHeight="101.0" prefWidth="313.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField editable="false" text="Class &amp; Level" />
+                                    <TextField editable="false" text="Background" GridPane.columnIndex="1" />
+                                    <TextField editable="false" text="Player name" GridPane.columnIndex="2" />
+                                    <TextField GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField editable="false" text="Race" GridPane.rowIndex="2" />
+                                    <TextField GridPane.rowIndex="3" />
+                                    <TextField editable="false" text="Alignement" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField editable="false" text="Experience point" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="364.0" layoutY="307.0">
+                           <children>
+                              <SplitPane dividerPositions="0.3472222222222222" layoutY="33.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="232.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <GridPane gridLinesVisible="true" layoutX="-1.0" layoutY="-1.0" prefHeight="101.0" prefWidth="232.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints maxHeight="45.0" minHeight="1.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="47.0" minHeight="0.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                                              <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <TextField />
+                                                <TextField GridPane.rowIndex="1" />
+                                                <TextField GridPane.rowIndex="2" />
+                                                <TextField GridPane.rowIndex="3" />
+                                                <TextField GridPane.rowIndex="4" />
+                                                <TextField GridPane.columnIndex="1" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <TextField GridPane.columnIndex="2" />
+                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="145.0" prefWidth="208.0">
+                                       <children>
+                                          <ScrollPane prefHeight="185.0" prefWidth="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <TextArea prefHeight="183.0" prefWidth="228.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <AnchorPane prefHeight="33.0" prefWidth="232.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="42.0" layoutY="2.0" prefHeight="33.0" prefWidth="232.0" text="Attacks &amp; Spellcasting" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="610.0" layoutY="308.0" prefHeight="323.0" prefWidth="232.0">
+                           <children>
+                              <AnchorPane>
+                                 <children>
+                                    <AnchorPane prefHeight="33.0" prefWidth="232.0">
+                                       <children>
+                                          <TextField alignment="CENTER" editable="false" layoutX="42.0" layoutY="2.0" prefHeight="33.0" prefWidth="232.0" text="Equipment" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <SplitPane dividerPositions="0.29797979797979796" layoutY="33.0" prefHeight="290.0" prefWidth="232.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <GridPane gridLinesVisible="true" layoutX="-67.0" layoutY="49.0" prefHeight="290.0" prefWidth="71.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <TextField alignment="CENTER" editable="false" text="CP" />
+                                                <TextField alignment="CENTER" GridPane.rowIndex="1" />
+                                                <TextField alignment="CENTER" editable="false" text="SP" GridPane.rowIndex="2" />
+                                                <TextField alignment="CENTER" GridPane.rowIndex="3" />
+                                                <TextField alignment="CENTER" editable="false" text="EP" GridPane.rowIndex="4" />
+                                                <TextField alignment="CENTER" GridPane.rowIndex="5" />
+                                                <TextField alignment="CENTER" editable="false" text="GP" GridPane.rowIndex="6" />
+                                                <TextField alignment="CENTER" GridPane.rowIndex="7" />
+                                                <TextField alignment="CENTER" editable="false" text="PP" GridPane.rowIndex="8" />
+                                                <TextField alignment="CENTER" GridPane.rowIndex="9" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <ScrollPane layoutY="39.0" prefHeight="277.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <TextArea prefHeight="286.0" prefWidth="156.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="612.0" layoutY="649.0" minWidth="-Infinity" prefHeight="258.0" prefWidth="232.0">
+                           <children>
+                              <ScrollPane layoutX="1.0" layoutY="34.0" prefHeight="288.0" prefWidth="230.0">
+                                 <content>
+                                    <TextArea prefHeight="286.0" prefWidth="228.0" />
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane prefHeight="34.0" prefWidth="253.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutY="8.0" prefHeight="34.0" prefWidth="232.0" text="Features &amp; Traits" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.17391304347826086" layoutX="376.0" layoutY="649.0" prefHeight="27.0" prefWidth="209.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="41.0" prefWidth="44.0">
+                                 <children>
+                                    <TextField fx:id="PassPerc" alignment="CENTER" editable="false" layoutX="-51.0" layoutY="17.0" prefHeight="43.0" prefWidth="47.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField editable="false" layoutX="-18.0" layoutY="17.0" prefHeight="25.0" prefWidth="166.0" text="Passive Wisdom (Perception)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <AnchorPane layoutX="353.0" layoutY="683.0" prefHeight="288.0" prefWidth="254.0">
+                           <children>
+                              <ScrollPane layoutX="1.0" layoutY="34.0" prefHeight="254.0" prefWidth="253.0">
+                                 <content>
+                                    <TextArea prefHeight="252.0" prefWidth="251.0" />
+                                 </content>
+                              </ScrollPane>
+                              <AnchorPane prefHeight="34.0" prefWidth="253.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutY="8.0" prefHeight="34.0" prefWidth="253.0" text="Other Proficencies &amp; Languages" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="SaveBtn" layoutX="28.0" layoutY="43.0" mnemonicParsing="false" onAction="#SaveSheet" prefHeight="43.0" prefWidth="99.0" text="Save">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Spell">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="201.0" layoutY="35.0" />
+                        <GridPane layoutX="259.0" layoutY="44.0" prefHeight="60.0" prefWidth="360.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField alignment="CENTER" />
+                              <TextField alignment="CENTER" GridPane.columnIndex="1" />
+                              <TextField alignment="CENTER" GridPane.columnIndex="2" />
+                              <TextField alignment="CENTER" text="Spellcasting Ability" GridPane.rowIndex="1" />
+                              <TextField alignment="CENTER" text="Spell Save DC" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField alignment="CENTER" text="Spell attack bonus" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                        <AnchorPane layoutX="14.0" layoutY="158.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level1Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="1° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add1LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level1Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl1Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level1Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                            </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="296.0" layoutY="158.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level2Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="2° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add2LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level2Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl2Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level2Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="586.0" layoutY="158.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level3Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="3° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add3LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level3Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl3Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level3Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="403.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level4Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="4° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add4LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level4Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl4Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level4Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="296.0" layoutY="403.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level5Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="5° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add5LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level5Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl5Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level5Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="586.0" layoutY="403.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level6Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="6° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add6LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level6Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl6Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level6Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="674.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level7Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="7° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add7LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level7Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl7Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level7Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="296.0" layoutY="674.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level8Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="8° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add8LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level8Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl8Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level8Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="586.0" layoutY="674.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5466666666666666" layoutY="25.0" prefHeight="32.0" prefWidth="152.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <MenuButton fx:id="Level9Menu" alignment="CENTER" layoutX="-18.0" layoutY="27.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="56.0" text="9° Level" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#Add9LvlSpell" text="Add">
+                                                         <graphic>
+                                                            <TextField fx:id="Level9Name" promptText="Spell Name" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                                <MenuItem mnemonicParsing="false">
+                                                   <graphic>
+                                                      <Button mnemonicParsing="false" onAction="#RemoveLvl9Spell" text="Remove">
+                                                         <graphic>
+                                                            <TextField fx:id="Level9Rem" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </graphic>
+                                                </MenuItem>
+                                             </items>
+                                          </MenuButton>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="36.0" prefWidth="89.0">
+                                       <children>
+                                          <TextField layoutX="-52.0" layoutY="3.0" prefHeight="30.0" prefWidth="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <TextField alignment="CENTER" layoutX="83.0" prefHeight="25.0" prefWidth="69.0" text="Slot Total" />
+                              <TextField layoutX="152.0" layoutY="25.0" prefHeight="31.0" prefWidth="93.0" />
+                              <TextField alignment="CENTER" layoutX="153.0" prefHeight="25.0" prefWidth="91.0" text="Slot Expended" />
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.47297297297297297" layoutX="99.0" layoutY="36.0" orientation="VERTICAL" prefHeight="76.0" prefWidth="160.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="28.0" prefWidth="158.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="35.0" prefHeight="32.0" prefWidth="158.0" text="Spellcasting Class" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField layoutX="-16.0" layoutY="-1.0" prefHeight="23.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Biography">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="201.0" layoutY="33.0">
+                           <children>
+                              <SplitPane dividerPositions="0.48" layoutY="25.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="160.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TextField alignment="CENTER" editable="false" layoutX="35.0" layoutY="-12.0" prefHeight="21.0" prefWidth="158.0" text="Character name" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TextField layoutX="-16.0" layoutY="-1.0" prefHeight="23.0" prefWidth="158.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                              <GridPane layoutX="161.0" prefHeight="101.0" prefWidth="313.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <TextField editable="false" text="Age" />
+                                    <TextField editable="false" text="Height" GridPane.columnIndex="1" />
+                                    <TextField editable="false" text="Weight" GridPane.columnIndex="2" />
+                                    <TextField GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <TextField editable="false" text="Eyes" GridPane.rowIndex="2" />
+                                    <TextField GridPane.rowIndex="3" />
+                                    <TextField editable="false" text="Skin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField editable="false" text="Hair" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <SplitPane dividerPositions="0.9" layoutX="14.0" layoutY="157.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="208.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <ImageView fx:id="CharacterImage" fitHeight="273.0" fitWidth="207.0" layoutX="-1.0" layoutY="-1.0" onContextMenuRequested="#ImageSelection" pickOnBounds="true" preserveRatio="true" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="-8.0" prefHeight="25.0" prefWidth="206.0" text="Character Appearence" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.9032258064516129" layoutX="488.0" layoutY="157.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="370.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea layoutX="64.0" layoutY="23.0" prefHeight="277.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="368.0" text="Allies &amp; Organization" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.9474747474747475" layoutX="14.0" layoutY="478.0" orientation="VERTICAL" prefHeight="497.0" prefWidth="208.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea layoutX="64.0" layoutY="23.0" prefHeight="277.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="368.0" text="Backstory" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.8744939271255061" layoutX="228.0" layoutY="478.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="630.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea layoutX="64.0" layoutY="23.0" prefHeight="277.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="368.0" text="Additional Feature &amp; Traits" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.8744939271255061" layoutX="228.0" layoutY="727.0" orientation="VERTICAL" prefHeight="249.0" prefWidth="630.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea layoutX="64.0" layoutY="23.0" prefHeight="277.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="368.0" text="Treasure" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                        <SplitPane dividerPositions="0.9032258064516129" layoutX="228.0" layoutY="157.0" orientation="VERTICAL" prefHeight="312.0" prefWidth="254.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextArea layoutX="64.0" layoutY="23.0" prefHeight="277.0" prefWidth="368.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TextField alignment="CENTER" editable="false" layoutX="117.0" layoutY="1.0" prefHeight="27.0" prefWidth="368.0" text="Key Items" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </content>
+</ScrollPane>
